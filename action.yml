@@ -1,0 +1,25 @@
+name: 'Generate Changelog action'
+description: 'Generate Changelog action'
+author: 'hunghg255'
+branding:
+  icon: "package"
+  color: "gray-dark"
+
+runs:
+  using: 'node18'
+  main: 'lib/index.js'
+
+inputs:
+  github_token:
+    description: 'Set a generated GITHUB_TOKEN for pushing to the remote branch.'
+    required: false
+    default: ${{ github.token }}
+  from_branch:
+    description: 'Set a branch name.'
+    required: false
+    default: 'changelog-action'
+  to_branch:
+    description: 'Set a branch name.'
+    required: true
+    default: 'master'
+
