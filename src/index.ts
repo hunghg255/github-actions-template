@@ -11,11 +11,9 @@ function main() {
     console.log(`from_branch: ${from_branch}`);
     console.log(`to_branch: ${to_branch}`);
 
-  }
-  catch (error: any) {
+  } catch (error: any) {
     setFailed(error.message)
   }
 }
 
-//@ts-ignore
-main().catch(error => setFailed(error.message))
+main()
